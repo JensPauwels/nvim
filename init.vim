@@ -164,6 +164,7 @@ nnoremap <Leader>rulti :call UltiSnips#RefreshSnippets()<cr>
 nnoremap <Leader>insert :call ShowCheckBoxes(function('MyVimPlugin'))<cr>
 nnoremap <Leader>generate :call AskQuestionsForDocGenerator(function('DocGenerator'))<cr>
 nnoremap <Leader>file :call AskQuestionsToGenerateFile(function('FileGenerator'))<cr>
+nnoremap <Leader>trans :call AskQuestionsToTranslate(function('Translate'))<cr>
 
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
 xmap <leader>a  <Plug>(coc-codeaction-selected)

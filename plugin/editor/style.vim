@@ -16,7 +16,7 @@ set list
 set background=dark
 
 let ayucolor="mirage" " for mirage version of theme
-colorscheme ayu
+colorscheme challenger_deep
 " Show the title in the terminal.
 set title
 

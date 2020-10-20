@@ -60,6 +60,20 @@ function! AskQuestionsToGenerateFile(callback) abort
     startinsert
 endfunction
 
+function! AskQuestionsToTranslate(callback) abort
+    botright new
+    let l:outputFile = tempname()
+    let l:callback = [a:callback]
+    let l:config = {
+                \ 'on_exit': function('s:HandleCheckboxOutput'),
+                \ 'outputFile': l:outputFile,
+                \ 'callback': l:callback,
+                \ }
+
+    let l:term = termopen(['python', '/Users/jenspauwels/.config/nvim/lib/translater/translate.py', l:outputFile], l:config)
+    startinsert
+endfunction
+
 
 let s:hidden_all = 0
 function! ToggleHiddenAll()
@@ -132,6 +146,26 @@ sys.path.append(python_module_path)
 
 from main import startGenerator 
 startGenerator(vim.eval('a:data'));
+
+vim.command('NERDTreeRefreshRoot')
+
+endpython
+endfunction
+
+function! Translate(data) abort
+python3 << endpython
+
+import os
+import sys
+import vim
+import json
+
+plugin_path = vim.eval("g:plugin_path")
+python_module_path = os.path.abspath('%s/../../lib/translater' % (plugin_path))
+sys.path.append(python_module_path)
+
+from main import executeTranslation
+executeTranslation(vim.eval('a:data'));
 
 vim.command('NERDTreeRefreshRoot')
 
