@@ -133,7 +133,7 @@ endfunction
 
 
 function! FileGenerator(data) abort
-python << endpython
+py3 << endpython
 
 import os
 import sys
@@ -164,7 +164,8 @@ plugin_path = vim.eval("g:plugin_path")
 python_module_path = os.path.abspath('%s/../../lib/translater' % (plugin_path))
 sys.path.append(python_module_path)
 
-from main import executeTranslation
+print(python_module_path)
+from main import executeTranslation 
 executeTranslation(vim.eval('a:data'));
 
 vim.command('NERDTreeRefreshRoot')
@@ -184,6 +185,7 @@ plugin_path = vim.eval("g:plugin_path")
 python_module_path = os.path.abspath('%s/../../lib/docGenerator' % (plugin_path))
 sys.path.append(python_module_path)
 
+print(python_module_path)
 from main import startGenerator 
 startGenerator(vim.eval('a:data'));
 

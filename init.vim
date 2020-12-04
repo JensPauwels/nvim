@@ -3,6 +3,7 @@ call plug#begin("~/.local/share/nvim/plugged")
 
 Plug 'challenger-deep-theme/vim'
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'herrbischoff/cobalt2.vim'
 
 
 " Tab
@@ -27,13 +28,15 @@ Plug 'yuki-ycino/fzf-preview.vim'
 
 Plug 'tpope/vim-commentary'               " Comments stuff
 
-Plug 'mattn/emmet-vim', { 'for': ['javascript.jsx', 'javascript', 'html', 'css'] }
+Plug 'mattn/emmet-vim', { 'for': ['javascript.jsx', 'javascript.tsx', 'javascript', 'html', 'css'] }
 
 " Plug 'chemzqm/vim-jsx-improve'
 " Plug 'othree/yajs.vim'
 "
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'ianks/vim-tsx'
+" Plug 'peitalin/vim-jsx-typescript'
 
 "
 Plug 'SirVer/ultisnips'
@@ -49,6 +52,9 @@ call plug#end()
 
 let mapleader="\<Space>"
 let g:vim_jsx_pretty_colorful_config = 1
+
+au BufNewFile,BufRead *.ts setlocal filetype=typescript
+au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
 
 
 " vim-prettier

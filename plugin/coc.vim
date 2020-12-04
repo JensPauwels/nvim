@@ -5,6 +5,7 @@ let g:coc_global_extensions = [
   \ 'coc-eslint', 
   \ 'coc-json', 
   \ 'coc-tsserver', 
+  \ 'coc-emmet', 
   \ ]
 inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
 let g:coc_snippet_next = '<TAB>'

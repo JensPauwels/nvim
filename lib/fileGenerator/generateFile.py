@@ -1,6 +1,5 @@
-from __future__ import print_function, unicode_literals
-from pyfzf import FzfPrompt
 from whaaaaat import prompt
+from pyfzf.pyfzf import FzfPrompt
 
 import sys
 import json
