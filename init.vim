@@ -3,7 +3,7 @@ call plug#begin("~/.local/share/nvim/plugged")
 
 Plug 'challenger-deep-theme/vim'
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'herrbischoff/cobalt2.vim'
+Plug 'drewtempelmeyer/palenight.vim'
 
 
 " Tab
@@ -16,15 +16,19 @@ Plug 'mkitt/tabline.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-abolish'
+Plug 'heavenshell/vim-jsdoc', { 
+  \ 'for': ['javascript', 'javascript.jsx','typescript'], 
+  \ 'do': 'make install'
+\}
 
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 
 " Plug 'kien/ctrlp.vim'
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'yuki-ycino/fzf-preview.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
+
 
 Plug 'tpope/vim-commentary'               " Comments stuff
 
@@ -41,7 +45,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 "
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-surround'
-" Plug 'airblade/vim-rooter'
 Plug 'edkolev/tmuxline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -210,6 +213,8 @@ nnoremap <C-L> <C-W><C-L>
 " Toggle folds.
 nnoremap <Tab> za
 
+map <Leader>gr :FzfPreviewProjectGrep 
+
 
 augroup AutoWrite
     autocmd! BufLeave * :update
@@ -234,7 +239,6 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-
 
 " <Leader>f{char} to move to {char}
 map  <Leader>f <Plug>(easymotion-bd-f)

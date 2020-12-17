@@ -42,7 +42,7 @@ endif
 " nnoremap <expr> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles . --exclude-standard --others --cached')."\<cr>"
 " nnoremap <expr> <C-p> ':Files '."\<cr>"
 
-nnoremap <expr> <C-p> ':Files'."\<cr>"
+nnoremap <expr> <C-p> ':FzfPreviewProjectFiles'."\<cr>"
 
 " function! s:find_git_root()
 "   return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
