@@ -11,6 +11,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'ervandew/supertab'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
+Plug 'pangloss/vim-javascript'
 
 Plug 'mkitt/tabline.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -54,6 +55,7 @@ call plug#end()
 
 
 let mapleader="\<Space>"
+let g:javascript_plugin_jsdoc = 1
 let g:vim_jsx_pretty_colorful_config = 1
 
 au BufNewFile,BufRead *.ts setlocal filetype=typescript
