@@ -21,3 +21,6 @@ let g:tmuxline_theme = {
     \   'cwin' : [ 236, 103 ],
     \   'bg'   : [ 244, 236 ],
     \ }
+
+let g:airline_theme='one'
+

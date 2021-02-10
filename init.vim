@@ -28,7 +28,9 @@ Plug 'airblade/vim-gitgutter'
 " Plug 'kien/ctrlp.vim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
+Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release/remote', 'do': ':UpdateRemotePlugins' }
+
+
 
 
 Plug 'tpope/vim-commentary'               " Comments stuff

@@ -15,8 +15,7 @@ set list
 " Set the color scheme to Solarized.
 set background=dark
 
-let ayucolor="mirage" " for mirage version of theme
-colorscheme palenight
+colorscheme daycula
 " Show the title in the terminal.
 set title
 
