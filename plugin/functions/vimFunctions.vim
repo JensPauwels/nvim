@@ -56,7 +56,7 @@ function! AskQuestionsToGenerateFile(callback) abort
                 \ 'callback': l:callback,
                 \ }
 
-    let l:term = termopen(['python', '/Users/jenspauwels/.config/nvim/lib/fileGenerator/generateFile.py', l:outputFile], l:config)
+    let l:term = termopen(['python3', '/Users/jenspauwels/.config/nvim/lib/fileGenerator/generateFile.py', l:outputFile], l:config)
     startinsert
 endfunction
 

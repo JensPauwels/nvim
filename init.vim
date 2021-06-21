@@ -4,6 +4,8 @@ call plug#begin("~/.local/share/nvim/plugged")
 Plug 'challenger-deep-theme/vim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+
 
 
 " Tab
@@ -15,37 +17,20 @@ Plug 'pangloss/vim-javascript'
 
 Plug 'mkitt/tabline.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-" Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-abolish'
+Plug 'ap/vim-css-color'
 Plug 'heavenshell/vim-jsdoc', { 
   \ 'for': ['javascript', 'javascript.jsx','typescript'], 
   \ 'do': 'make install'
 \}
-
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
-
-" Plug 'kien/ctrlp.vim'
-
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release/remote', 'do': ':UpdateRemotePlugins' }
-
-
-
-
 Plug 'tpope/vim-commentary'               " Comments stuff
-
 Plug 'mattn/emmet-vim', { 'for': ['javascript.jsx', 'javascript.tsx', 'javascript', 'html', 'css'] }
-
-" Plug 'chemzqm/vim-jsx-improve'
-" Plug 'othree/yajs.vim'
-"
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
-" Plug 'ianks/vim-tsx'
-" Plug 'peitalin/vim-jsx-typescript'
-
-"
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-surround'
 Plug 'edkolev/tmuxline.vim'

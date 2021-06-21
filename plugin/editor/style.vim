@@ -15,7 +15,9 @@ set list
 " Set the color scheme to Solarized.
 set background=dark
 
-colorscheme daycula
+" colorscheme daycula
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
 " Show the title in the terminal.
 set title
 

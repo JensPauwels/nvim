@@ -1,18 +1,3 @@
-snippet ccp "create's a new mobx component"
-import React, { Component } from 'react';
-import { observer } from 'mobx-react';
-
-@observer
-export default class $1 extends Component {
-  render() {
-    return (
-      <div>$2</div>
-    )
-  }
-}
-
-endsnippet
-
 snippet imr "import react"
 import React from 'react';
 endsnippet
@@ -35,48 +20,6 @@ endsnippet
 
 snippet imp "import"
 import { $1 } from '$0';
-endsnippet
-
-snippet cdm "Component did mount"
-componentDidMount = ($1) => {
-	$2
-};
-endsnippet
-
-snippet cwm "Component will mount"
-componentWillMount = ($1) => {
-	$2
-};
-endsnippet
-
-snippet cwrp "Component Will Receive Props" b
-componentWillReceiveProps = nextProps => {
-	$1
-};
-endsnippet
-
-snippet scup "Should Component Update" b
-shouldComponentUpdate = (nextProps, nextState) => {
-	$1
-};
-endsnippet
-
-snippet cwup "Component Will Update" b
-componentWillUpdate = (nextProps, nextState) => {
-	$1
-};
-endsnippet
-
-snippet cdup "Component Did Update" b
-componentDidUpdate = (prevProps, prevState) => {
-	$1
-};
-endsnippet
-
-snippet cwu "Component Will Unmount" b
-componentWillUnmount = () => {
-	$1
-};
 endsnippet
 
 snippet fm "FormattedMessage" b
