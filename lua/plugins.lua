@@ -16,11 +16,12 @@ return require('packer').startup(
     use 'ervandew/supertab'
     use 'jiangmiao/auto-pairs'
     use 'mattn/emmet-vim'
-    use 'neovim/nvim-lspconfig'
-    use 'nvim-lua/completion-nvim'
     use 'tweekmonster/startuptime.vim'
     use 'wbthomason/packer.nvim'
-    use 'hrsh7th/nvim-compe'
+    use 'neoclide/coc.nvim'
+    -- use 'neovim/nvim-lspconfig'
+    -- use 'nvim-lua/completion-nvim'
+    -- use 'hrsh7th/nvim-compe'
     use {
       'nvim-telescope/telescope.nvim',
       requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
