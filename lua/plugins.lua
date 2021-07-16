@@ -10,6 +10,7 @@ return require('packer').startup(
     use 'lifepillar/vim-gruvbox8'
     use 'tpope/vim-commentary'
     use 'SirVer/ultisnips'
+    use 'edkolev/tmuxline.vim'
     use 'maxmellon/vim-jsx-pretty'
     use 'pangloss/vim-javascript'
     use 'ervandew/supertab'

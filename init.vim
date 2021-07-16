@@ -19,7 +19,7 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <expr> <C-p> ':Telescope find_files'."\<cr>"
-
+nnoremap tnew :tabnew<CR>
 
 " call operator#sandwich#set('all', 'all', 'highlight', 1)
 
@@ -38,4 +38,27 @@ let g:user_emmet_settings = {
 \}
 
 let g:SuperTabDefaultCompletionType = "<c-n>"
+let g:UltiSnipsExpandTrigger = "<TAB>"
+let g:UltiSnipsJumpForwardTrigger="<c-l>"
+let g:UltiSnipsJumpBackwardTrigger="<c-h>"
+let g:UltiSnipsSnippetsDir = "~/.config/nvim/ultisnips"
 
+let g:tmuxline_preset = {
+      \'win'  : '#I #W',
+      \'cwin' : '#I #W',
+      \'x'    : '%a',
+      \'y'    : ['#(~/bin/battery)','%R',  '#(whoami)']}
+
+let g:tmuxline_theme = {
+    \   'a'    : [ 236, 103 ],
+    \   'b'    : [ 253, 239 ],
+    \   'c'    : [ 244, 236 ],
+    \   'x'    : [ 244, 236 ],
+    \   'y'    : [ 253, 239 ],
+    \   'z'    : [ 236, 103 ],
+    \   'win'  : [ 103, 236 ],
+    \   'cwin' : [ 236, 103 ],
+    \   'bg'   : [ 244, 236 ],
+    \ }
+
+" let g:airline_theme='one'
