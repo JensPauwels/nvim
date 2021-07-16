@@ -16,8 +16,7 @@ set list
 set background=dark
 
 " colorscheme daycula
-colorscheme onehalfdark
-let g:airline_theme='onehalfdark'
+colorscheme challenger_deep
 " Show the title in the terminal.
 set title
 

@@ -22,5 +22,4 @@ let g:tmuxline_theme = {
     \   'bg'   : [ 244, 236 ],
     \ }
 
-let g:airline_theme='one'
 
