@@ -14,14 +14,27 @@ return require('packer').startup(
     use 'maxmellon/vim-jsx-pretty'
     use 'pangloss/vim-javascript'
     use 'ervandew/supertab'
+    use 'wbthomason/packer.nvim'
     use 'jiangmiao/auto-pairs'
     use 'mattn/emmet-vim'
     use 'tweekmonster/startuptime.vim'
-    use 'wbthomason/packer.nvim'
-    use 'neoclide/coc.nvim'
-    -- use 'neovim/nvim-lspconfig'
-    -- use 'nvim-lua/completion-nvim'
-    -- use 'hrsh7th/nvim-compe'
+    use 'hrsh7th/nvim-compe'
+    use 'neovim/nvim-lspconfig'
+    use 'nvim-lua/completion-nvim'
+    use 'tpope/vim-surround'
+    use 'mkitt/tabline.vim'
+    use 'norcalli/nvim-colorizer.lua'
+    use 'jose-elias-alvarez/nvim-lsp-ts-utils'
+
+    use {
+      'glepnir/galaxyline.nvim',
+      branch = 'main',
+      -- your statusline
+      config = function() require'my_statusline' end,
+      -- some optional icons
+      requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    }
+
     use {
       'nvim-telescope/telescope.nvim',
       requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}

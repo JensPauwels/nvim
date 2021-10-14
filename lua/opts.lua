@@ -5,6 +5,8 @@ vim.o.ignorecase = true
 vim.o.hlsearch = true
 vim.o.background = 'dark'
 vim.o.termguicolors = true
+vim.o.lazyredraw = true
+
 vim.o.hidden = true
 vim.o.updatetime = 300
 vim.o.scrolloff = 5

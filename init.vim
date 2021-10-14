@@ -14,12 +14,20 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 
+inoremap jk <ESC>
+
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <expr> <C-p> ':Telescope find_files'."\<cr>"
 nnoremap tnew :tabnew<CR>
+
+nnoremap <Leader>k ddkP
+nnoremap <Leader>j ddp
 
 " call operator#sandwich#set('all', 'all', 'highlight', 1)
 
@@ -60,19 +68,4 @@ let g:tmuxline_theme = {
     \   'cwin' : [ 236, 103 ],
     \   'bg'   : [ 244, 236 ],
     \ }
-
-" let g:airline_theme='one'
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Use `:Format` to format current buffer
-command! -nargs=0 Format :call CocAction('format')
-
-" Use `:Fold` to fold current buffer
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
-autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
