@@ -1,6 +1,6 @@
 require('plugins')
 require('opts')
-vim.cmd('colo challenger_deep')
+require('style')
 
 require('binds')
 require('stl')

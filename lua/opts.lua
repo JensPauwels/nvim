@@ -18,7 +18,7 @@ vim.o.showmode = false
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.wo.signcolumn = 'number'
-vim.wo.wrap = false
+vim.wo.wrap = true
 
 vim.o.tabstop = 2
 vim.bo.tabstop = 2

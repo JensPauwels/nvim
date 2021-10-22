@@ -5,9 +5,9 @@ vim.cmd('packadd packer.nvim')
 return require('packer').startup(
   function()
     use 'challenger-deep-theme/vim'
+    use 'drewtempelmeyer/palenight.vim'
     use 'scrooloose/nerdtree'
     use 'machakann/vim-sandwich'
-    use 'lifepillar/vim-gruvbox8'
     use 'tpope/vim-commentary'
     use 'SirVer/ultisnips'
     use 'edkolev/tmuxline.vim'
@@ -24,7 +24,19 @@ return require('packer').startup(
     use 'tpope/vim-surround'
     use 'mkitt/tabline.vim'
     use 'norcalli/nvim-colorizer.lua'
-    use 'jose-elias-alvarez/nvim-lsp-ts-utils'
+    use 'folke/tokyonight.nvim'
+    use 'folke/lsp-colors.nvim'
+    use {
+      "folke/trouble.nvim",
+      requires = "kyazdani42/nvim-web-devicons",
+      config = function()
+        require("trouble").setup {
+          -- your configuration comes here
+          -- or leave it empty to use the default settings
+          -- refer to the configuration section below
+        }
+      end
+    }
 
     use {
       'glepnir/galaxyline.nvim',
