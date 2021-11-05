@@ -69,25 +69,33 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["auto-pairs"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/auto-pairs"
+  },
   ["completion-nvim"] = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/completion-nvim"
   },
-  ["diagnostic-nvim"] = {
+  ["emmet-vim"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/diagnostic-nvim"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/emmet-vim"
   },
-  fzf = {
+  ["galaxyline.nvim"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/fzf"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
   },
-  ["fzf.vim"] = {
+  ["lsp-colors.nvim"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/fzf.vim"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim"
   },
   nerdtree = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/nerdtree"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
   },
   ["nvim-compe"] = {
     loaded = true,
@@ -97,9 +105,25 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/packer.nvim"
+  },
+  ["palenight.vim"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/palenight.vim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
   ["startuptime.vim"] = {
     loaded = true,
@@ -109,45 +133,62 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/supertab"
   },
-  termbufm = {
+  ["tabline.vim"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/termbufm"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/tabline.vim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  ["tmuxline.vim"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/tmuxline.vim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
+  },
+  ["trouble.nvim"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0" },
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/trouble.nvim"
   },
   ultisnips = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/ultisnips"
   },
-  ["vim-closer"] = {
+  vim = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-closer"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim"
   },
   ["vim-commentary"] = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-commentary"
   },
-  ["vim-cool"] = {
+  ["vim-javascript"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-cool"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-javascript"
   },
-  ["vim-gruvbox8"] = {
+  ["vim-jsx-pretty"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-gruvbox8"
-  },
-  ["vim-highlightedyank"] = {
-    loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-highlightedyank"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty"
   },
   ["vim-sandwich"] = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-sandwich"
   },
-  ["vim-snippets"] = {
+  ["vim-surround"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-snippets"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-surround"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+time([[Config for trouble.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
