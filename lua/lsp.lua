@@ -1,4 +1,5 @@
 local nvim_lsp = require("lspconfig")
+
 local format_async = function(err, _, result, _, bufnr)
     if err ~= nil or result == nil then return end
     if not vim.api.nvim_buf_get_option(bufnr, "modified") then
@@ -10,15 +11,7 @@ local format_async = function(err, _, result, _, bufnr)
         end
     end
 end
-vim.lsp.handlers["textDocument/formatting"] = format_async
-_G.lsp_organize_imports = function()
-    local params = {
-        command = "_typescript.organizeImports",
-        arguments = {vim.api.nvim_buf_get_name(0)},
-        title = ""
-    }
-    vim.lsp.buf.execute_command(params)
-end
+
 local on_attach = function(client, bufnr)
     local buf_map = vim.api.nvim_buf_set_keymap
     vim.cmd("command! LspDef lua vim.lsp.buf.definition()")
@@ -112,7 +105,7 @@ local on_attach = function(client, bufnr)
 
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+-- capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require'lspconfig'.cssls.setup {
   capabilities = capabilities,
