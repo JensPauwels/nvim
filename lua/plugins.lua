@@ -6,6 +6,8 @@ return require('packer').startup(
   function()
     use 'challenger-deep-theme/vim'
     use 'drewtempelmeyer/palenight.vim'
+    use 'EdenEast/nightfox.nvim'
+
     use 'scrooloose/nerdtree'
     use 'machakann/vim-sandwich'
     use 'tpope/vim-commentary'
@@ -19,6 +21,7 @@ return require('packer').startup(
     use 'jiangmiao/auto-pairs'
     use 'mattn/emmet-vim'
     use 'tweekmonster/startuptime.vim'
+    use 'kkoomen/vim-doge'
     use 'hrsh7th/nvim-compe'
     use 'neovim/nvim-lspconfig'
     use 'nvim-lua/completion-nvim'
