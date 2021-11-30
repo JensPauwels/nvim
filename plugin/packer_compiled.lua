@@ -71,116 +71,149 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["auto-pairs"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/auto-pairs"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/auto-pairs",
+    url = "https://github.com/jiangmiao/auto-pairs"
   },
   ["completion-nvim"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/completion-nvim"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/completion-nvim",
+    url = "https://github.com/nvim-lua/completion-nvim"
   },
   ["emmet-vim"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/emmet-vim"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/emmet-vim",
+    url = "https://github.com/mattn/emmet-vim"
   },
   ["galaxyline.nvim"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/galaxyline.nvim",
+    url = "https://github.com/glepnir/galaxyline.nvim"
   },
   ["lsp-colors.nvim"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
+    url = "https://github.com/folke/lsp-colors.nvim"
   },
   nerdtree = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/nerdtree"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/nerdtree",
+    url = "https://github.com/scrooloose/nerdtree"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-compe"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/nvim-compe",
+    url = "https://github.com/hrsh7th/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    url = "https://github.com/wbthomason/packer.nvim"
   },
   ["palenight.vim"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/palenight.vim"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/palenight.vim",
+    url = "https://github.com/drewtempelmeyer/palenight.vim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["startuptime.vim"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/startuptime.vim"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/startuptime.vim",
+    url = "https://github.com/tweekmonster/startuptime.vim"
   },
   supertab = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/supertab"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/supertab",
+    url = "https://github.com/ervandew/supertab"
   },
   ["tabline.vim"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/tabline.vim"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/tabline.vim",
+    url = "https://github.com/mkitt/tabline.vim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["tmuxline.vim"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/tmuxline.vim"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/tmuxline.vim",
+    url = "https://github.com/edkolev/tmuxline.vim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["trouble.nvim"] = {
     config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0" },
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/trouble.nvim"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   ultisnips = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/ultisnips"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/ultisnips",
+    url = "https://github.com/SirVer/ultisnips"
   },
   vim = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim",
+    url = "https://github.com/challenger-deep-theme/vim"
+  },
+  ["vim-abolish"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-abolish",
+    url = "https://github.com/tpope/vim-abolish"
   },
   ["vim-commentary"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-commentary"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
   },
   ["vim-javascript"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-javascript"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-javascript",
+    url = "https://github.com/pangloss/vim-javascript"
   },
   ["vim-jsx-pretty"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
+    url = "https://github.com/maxmellon/vim-jsx-pretty"
   },
   ["vim-sandwich"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-sandwich"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-sandwich",
+    url = "https://github.com/machakann/vim-sandwich"
   },
   ["vim-surround"] = {
     loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-surround"
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   }
 }
 
