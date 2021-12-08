@@ -8,10 +8,22 @@ return require('packer').startup(
     use 'drewtempelmeyer/palenight.vim'
     use 'EdenEast/nightfox.nvim'
 
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
+    use 'quangnguyen30192/cmp-nvim-ultisnips'
+
+    use 'onsails/lspkind-nvim'
+    use 'neovim/nvim-lspconfig'
+    use 'folke/lsp-colors.nvim'
+
     use 'scrooloose/nerdtree'
     use 'machakann/vim-sandwich'
     use 'tpope/vim-commentary'
     use 'SirVer/ultisnips'
+
     use 'tpope/vim-abolish'
     use 'edkolev/tmuxline.vim'
     use 'maxmellon/vim-jsx-pretty'
@@ -21,8 +33,6 @@ return require('packer').startup(
     use 'jiangmiao/auto-pairs'
     use 'mattn/emmet-vim'
     use 'kkoomen/vim-doge'
-    use 'hrsh7th/nvim-compe'
-    use 'neovim/nvim-lspconfig'
     use 'nvim-lua/completion-nvim'
     use 'tpope/vim-surround'
     use 'mkitt/tabline.vim'
@@ -30,7 +40,6 @@ return require('packer').startup(
     use 'folke/tokyonight.nvim'
     use 'bling/vim-airline'
     use 'vim-airline/vim-airline-themes'
-    use 'folke/lsp-colors.nvim'
     use {
       "folke/trouble.nvim",
       requires = "kyazdani42/nvim-web-devicons",
@@ -55,5 +64,9 @@ return require('packer').startup(
       'nvim-telescope/telescope.nvim',
       requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
     }
+
+    use "hrsh7th/nvim-cmp" --completion
+    use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+
   end
 )
