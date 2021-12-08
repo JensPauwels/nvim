@@ -1,6 +1,6 @@
 lua require 'init'
 
-set fdm=marker fdl=0
+" set fdm=marker fdl=0
 
 " Toggle NERDTree.
 map <leader>n :NERDTreeToggle<CR>
@@ -41,6 +41,7 @@ autocmd FileType html,css,javascript,jsx,tsx,ts EmmetInstall
 
 "Note that the trailing , still needs to be entered, so the new keymap would be <C-e>,.
 let g:user_emmet_leader_key=','
+let g:airlineTheme='night_owl'
 
 let g:user_emmet_settings = {
 \  'javascript.js' : {
@@ -56,22 +57,3 @@ let g:UltiSnipsExpandTrigger = "<TAB>"
 let g:UltiSnipsJumpForwardTrigger="<c-l>"
 let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 let g:UltiSnipsSnippetsDir = "~/.config/nvim/ultisnips"
-
-let g:tmuxline_preset = {
-      \'win'  : '#I #W',
-      \'cwin' : '#I #W',
-      \'x'    : '%a',
-      \'y'    : ['#(~/bin/battery)','%R',  '#(whoami)']}
-
-let g:tmuxline_theme = {
-    \   'a'    : [ 236, 103 ],
-    \   'b'    : [ 253, 239 ],
-    \   'c'    : [ 244, 236 ],
-    \   'x'    : [ 244, 236 ],
-    \   'y'    : [ 253, 239 ],
-    \   'z'    : [ 236, 103 ],
-    \   'win'  : [ 103, 236 ],
-    \   'cwin' : [ 236, 103 ],
-    \   'bg'   : [ 244, 236 ],
-    \ }
-

@@ -1,4 +1,4 @@
-vim.api.nvim_command('command! TSRehighlight :write | edit | TSBufEnable highlight')
+-- vim.api.nvim_command('command! TSRehighlight :write | edit | TSBufEnable highlight')
 
 local opts = {noremap = true, silent = true}
 

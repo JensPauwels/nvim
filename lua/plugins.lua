@@ -20,7 +20,6 @@ return require('packer').startup(
     use 'wbthomason/packer.nvim'
     use 'jiangmiao/auto-pairs'
     use 'mattn/emmet-vim'
-    use 'tweekmonster/startuptime.vim'
     use 'kkoomen/vim-doge'
     use 'hrsh7th/nvim-compe'
     use 'neovim/nvim-lspconfig'
@@ -29,6 +28,8 @@ return require('packer').startup(
     use 'mkitt/tabline.vim'
     use 'norcalli/nvim-colorizer.lua'
     use 'folke/tokyonight.nvim'
+    use 'bling/vim-airline'
+    use 'vim-airline/vim-airline-themes'
     use 'folke/lsp-colors.nvim'
     use {
       "folke/trouble.nvim",
