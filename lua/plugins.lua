@@ -19,20 +19,9 @@ return require('packer').startup(
     use 'folke/lsp-colors.nvim'
 
     use 'scrooloose/nerdtree'
-    use 'machakann/vim-sandwich'
     use 'tpope/vim-commentary'
     use 'quangnguyen30192/cmp-nvim-ultisnips'
-    use {
-      'SirVer/ultisnips',
-      requires = {{'honza/vim-snippets', rtp = '.'}},
-      config = function()      
-        vim.g.UltiSnipsExpandTrigger = '<Plug>(ultisnips_expand)'      
-        vim.g.UltiSnipsJumpForwardTrigger = '<Plug>(ultisnips_jump_forward)'
-        vim.g.UltiSnipsJumpBackwardTrigger = '<Plug>(ultisnips_jump_backward)'
-        vim.g.UltiSnipsListSnippets = '<c-x><c-s>'
-        vim.g.UltiSnipsRemoveSelectModeMappings = 0
-      end
-    }
+    use 'SirVer/ultisnips' 
 
     use 'tpope/vim-abolish'
     use 'edkolev/tmuxline.vim'

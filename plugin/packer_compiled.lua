@@ -211,7 +211,6 @@ _G.packer_plugins = {
     url = "https://github.com/folke/trouble.nvim"
   },
   ultisnips = {
-    config = { "\27LJ\2\nÌ\2\0\0\2\0\v\0\0216\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0'\1\a\0=\1\6\0006\0\0\0009\0\1\0'\1\t\0=\1\b\0006\0\0\0009\0\1\0)\1\0\0=\1\n\0K\0\1\0&UltiSnipsRemoveSelectModeMappings\15<c-x><c-s>\26UltiSnipsListSnippets$<Plug>(ultisnips_jump_backward)!UltiSnipsJumpBackwardTrigger#<Plug>(ultisnips_jump_forward) UltiSnipsJumpForwardTrigger\29<Plug>(ultisnips_expand)\27UltiSnipsExpandTrigger\6g\bvim\0" },
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/ultisnips",
     url = "https://github.com/SirVer/ultisnips"
@@ -246,16 +245,6 @@ _G.packer_plugins = {
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
     url = "https://github.com/maxmellon/vim-jsx-pretty"
   },
-  ["vim-sandwich"] = {
-    loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-sandwich",
-    url = "https://github.com/machakann/vim-sandwich"
-  },
-  ["vim-snippets"] = {
-    loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-snippets/.",
-    url = "https://github.com/honza/vim-snippets"
-  },
   ["vim-surround"] = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-surround",
@@ -264,18 +253,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Runtimepath customization
-time([[Runtimepath customization]], true)
-vim.o.runtimepath = vim.o.runtimepath .. ",/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-snippets/."
-time([[Runtimepath customization]], false)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
--- Config for: ultisnips
-time([[Config for ultisnips]], true)
-try_loadstring("\27LJ\2\nÌ\2\0\0\2\0\v\0\0216\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0'\1\a\0=\1\6\0006\0\0\0009\0\1\0'\1\t\0=\1\b\0006\0\0\0009\0\1\0)\1\0\0=\1\n\0K\0\1\0&UltiSnipsRemoveSelectModeMappings\15<c-x><c-s>\26UltiSnipsListSnippets$<Plug>(ultisnips_jump_backward)!UltiSnipsJumpBackwardTrigger#<Plug>(ultisnips_jump_forward) UltiSnipsJumpForwardTrigger\29<Plug>(ultisnips_expand)\27UltiSnipsExpandTrigger\6g\bvim\0", "config", "ultisnips")
-time([[Config for ultisnips]], false)
 if should_profile then save_profiles() end
 
 end)
