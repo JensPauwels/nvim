@@ -43,12 +43,62 @@ cmp.setup {
       behavior = cmp.ConfirmBehavior.Insert,
       select = true
     }),
-    ["<Tab>"] = cmp.mapping(function(fallback)
-      cmp_ultisnips_mappings.expand_or_jump_forwards(fallback)
-    end, { "i", "s" }),
-    ["<S-Tab>"] = cmp.mapping(function(fallback)
-      cmp_ultisnips_mappings.jump_backwards(fallback)
-    end, { "i", "s" })
+    ["<Tab>"] = cmp.mapping({
+      c = function()
+        if cmp.visible() then
+          cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
+        else
+          cmp.complete()
+        end
+      end,
+      i = function(fallback)
+        if cmp.visible() then
+          cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
+        elseif vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
+          vim.api.nvim_feedkeys(t("<Plug>(ultisnips_jump_forward)"), 'm', true)
+        else
+          fallback()
+        end
+      end,
+      s = function(fallback)
+        if vim.fn["UltiSnips#CanJumpForwards"]() == 1 then
+          vim.api.nvim_feedkeys(t("<Plug>(ultisnips_jump_forward)"), 'm', true)
+        else
+          fallback()
+        end
+      end
+    }),
+    ["<S-Tab>"] = cmp.mapping({
+      c = function()
+        if cmp.visible() then
+          cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
+        else
+          cmp.complete()
+        end
+      end,
+      i = function(fallback)
+        if cmp.visible() then
+          cmp.select_prev_item({ behavior = cmp.SelectBehavior.Insert })
+        elseif vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
+          return vim.api.nvim_feedkeys( t("<Plug>(ultisnips_jump_backward)"), 'm', true)
+        else
+          fallback()
+        end
+      end,
+      s = function(fallback)
+        if vim.fn["UltiSnips#CanJumpBackwards"]() == 1 then
+          return vim.api.nvim_feedkeys( t("<Plug>(ultisnips_jump_backward)"), 'm', true)
+        else
+          fallback()
+        end
+      end
+    }),
+    -- ["<Tab>"] = cmp.mapping(function(fallback)
+    --   cmp_ultisnips_mappings.expand_or_jump_forwards(fallback)
+    -- end, { "i", "s" }),
+    -- ["<S-Tab>"] = cmp.mapping(function(fallback)
+    --   cmp_ultisnips_mappings.jump_backwards(fallback)
+    -- end, { "i", "s" })
   },
   snippet = {expand = function(args) vim.fn["UltiSnips#Anon"](args.body) end},
   sources = {

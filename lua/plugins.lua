@@ -13,7 +13,6 @@ return require('packer').startup(
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
-    use 'quangnguyen30192/cmp-nvim-ultisnips'
 
     use 'onsails/lspkind-nvim'
     use 'neovim/nvim-lspconfig'
@@ -22,7 +21,18 @@ return require('packer').startup(
     use 'scrooloose/nerdtree'
     use 'machakann/vim-sandwich'
     use 'tpope/vim-commentary'
-    use 'SirVer/ultisnips'
+    use 'quangnguyen30192/cmp-nvim-ultisnips'
+    use {
+      'SirVer/ultisnips',
+      requires = {{'honza/vim-snippets', rtp = '.'}},
+      config = function()      
+        vim.g.UltiSnipsExpandTrigger = '<Plug>(ultisnips_expand)'      
+        vim.g.UltiSnipsJumpForwardTrigger = '<Plug>(ultisnips_jump_forward)'
+        vim.g.UltiSnipsJumpBackwardTrigger = '<Plug>(ultisnips_jump_backward)'
+        vim.g.UltiSnipsListSnippets = '<c-x><c-s>'
+        vim.g.UltiSnipsRemoveSelectModeMappings = 0
+      end
+    }
 
     use 'tpope/vim-abolish'
     use 'edkolev/tmuxline.vim'
@@ -38,8 +48,7 @@ return require('packer').startup(
     use 'mkitt/tabline.vim'
     use 'norcalli/nvim-colorizer.lua'
     use 'folke/tokyonight.nvim'
-    use 'bling/vim-airline'
-    use 'vim-airline/vim-airline-themes'
+    
     use {
       "folke/trouble.nvim",
       requires = "kyazdani42/nvim-web-devicons",
@@ -65,7 +74,6 @@ return require('packer').startup(
       requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
     }
 
-    use "hrsh7th/nvim-cmp" --completion
     use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
 
   end

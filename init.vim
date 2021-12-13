@@ -35,7 +35,6 @@ autocmd FileType html,css,javascript,jsx,tsx,ts EmmetInstall
 
 "Note that the trailing , still needs to be entered, so the new keymap would be <C-e>,.
 let g:user_emmet_leader_key=','
-let g:airlineTheme='night_owl'
 
 let g:user_emmet_settings = {
 \  'javascript.js' : {
@@ -47,7 +46,7 @@ let g:user_emmet_settings = {
 \}
 
 let g:SuperTabDefaultCompletionType = "<c-n>"
-let g:UltiSnipsExpandTrigger = "<TAB>"
-let g:UltiSnipsJumpForwardTrigger="<c-l>"
-let g:UltiSnipsJumpBackwardTrigger="<c-h>"
+" let g:UltiSnipsExpandTrigger = "<TAB>"
+" let g:UltiSnipsJumpForwardTrigger="<c-l>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 let g:UltiSnipsSnippetsDir = "~/.config/nvim/ultisnips"
