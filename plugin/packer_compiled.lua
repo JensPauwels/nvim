@@ -104,11 +104,6 @@ _G.packer_plugins = {
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/cmp-tabnine",
     url = "https://github.com/tzachar/cmp-tabnine"
   },
-  ["completion-nvim"] = {
-    loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/completion-nvim",
-    url = "https://github.com/nvim-lua/completion-nvim"
-  },
   ["emmet-vim"] = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/emmet-vim",
@@ -148,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
+  },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -229,6 +229,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
+  },
+  ["vim-css-color"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-css-color",
+    url = "https://github.com/ap/vim-css-color"
   },
   ["vim-doge"] = {
     loaded = true,

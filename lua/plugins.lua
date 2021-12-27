@@ -4,39 +4,60 @@ vim.cmd('packadd packer.nvim')
 
 return require('packer').startup(
   function()
+
+    -- themes
     use 'challenger-deep-theme/vim'
     use 'drewtempelmeyer/palenight.vim'
     use 'EdenEast/nightfox.nvim'
 
+    -- highlighting
+    use 'folke/lsp-colors.nvim'
+    use 'ap/vim-css-color'
+    use 'maxmellon/vim-jsx-pretty'
+    use 'pangloss/vim-javascript'
+    use 'norcalli/nvim-colorizer.lua'
+    use 'folke/tokyonight.nvim'
+
+    -- cmp
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
-
-    use 'onsails/lspkind-nvim'
-    use 'neovim/nvim-lspconfig'
-    use 'folke/lsp-colors.nvim'
-
-    use 'scrooloose/nerdtree'
-    use 'tpope/vim-commentary'
     use 'quangnguyen30192/cmp-nvim-ultisnips'
-    use 'SirVer/ultisnips' 
+    use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
 
+    -- lsp
+    use 'williamboman/nvim-lsp-installer'
+
+    -- completion
     use 'tpope/vim-abolish'
-    use 'edkolev/tmuxline.vim'
-    use 'maxmellon/vim-jsx-pretty'
-    use 'pangloss/vim-javascript'
-    use 'ervandew/supertab'
-    use 'wbthomason/packer.nvim'
     use 'jiangmiao/auto-pairs'
     use 'mattn/emmet-vim'
-    use 'kkoomen/vim-doge'
-    use 'nvim-lua/completion-nvim'
+    use 'ervandew/supertab'
     use 'tpope/vim-surround'
+
+    -- tmux
+    use 'edkolev/tmuxline.vim'
+
+    -- lsp
+    use 'onsails/lspkind-nvim'
+    use 'neovim/nvim-lspconfig'
+
+    -- commentary
+    use 'tpope/vim-commentary'
+    use 'kkoomen/vim-doge'
+
+    -- navigation
+    use 'scrooloose/nerdtree'
+
+    -- snippets
+    use 'SirVer/ultisnips' 
+
+    -- package manager
+    use 'wbthomason/packer.nvim'
+
     use 'mkitt/tabline.vim'
-    use 'norcalli/nvim-colorizer.lua'
-    use 'folke/tokyonight.nvim'
     
     use {
       "folke/trouble.nvim",
@@ -63,7 +84,6 @@ return require('packer').startup(
       requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
     }
 
-    use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
 
   end
 )

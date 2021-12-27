@@ -1,13 +1,7 @@
 local cmp = require('cmp')
-local cmp_ultisnips_mappings = require("cmp_nvim_ultisnips.mappings")
 
 local t = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
-end
-
-local check_back_space = function()
-  local col = vim.fn.col(".") - 1
-  return col == 0 or vim.fn.getline("."):sub(col, col):match("%s") ~= nil
 end
 
 cmp.setup {
@@ -23,11 +17,6 @@ cmp.setup {
         buffer = "[Buffer]",
         nvim_lua = "[Lua]",
         cmp_tabnine = "[TabNine]",
-        look = "[Look]",
-        path = "[Path]",
-        spell = "[Spell]",
-        calc = "[Calc]",
-        emoji = "[Emoji]"
       })[entry.source.name]
       return vim_item
     end
@@ -44,13 +33,6 @@ cmp.setup {
       select = true
     }),
     ["<Tab>"] = cmp.mapping({
-      c = function()
-        if cmp.visible() then
-          cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
-        else
-          cmp.complete()
-        end
-      end,
       i = function(fallback)
         if cmp.visible() then
           cmp.select_next_item({ behavior = cmp.SelectBehavior.Insert })
@@ -93,19 +75,12 @@ cmp.setup {
         end
       end
     }),
-    -- ["<Tab>"] = cmp.mapping(function(fallback)
-    --   cmp_ultisnips_mappings.expand_or_jump_forwards(fallback)
-    -- end, { "i", "s" }),
-    -- ["<S-Tab>"] = cmp.mapping(function(fallback)
-    --   cmp_ultisnips_mappings.jump_backwards(fallback)
-    -- end, { "i", "s" })
   },
   snippet = {expand = function(args) vim.fn["UltiSnips#Anon"](args.body) end},
   sources = {
     {name = 'buffer'}, {name = 'nvim_lsp'}, {name = "ultisnips"},
     {name = "nvim_lua"}, {name = "look"}, {name = "path"},
     {name = 'cmp_tabnine'}, {name = "calc"}, {name = "spell"},
-    {name = "emoji"}
   },
   completion = {completeopt = 'menu,menuone'},
   preselect = false
@@ -115,8 +90,3 @@ cmp.setup {
 -- TabNine
 local tabnine = require('cmp_tabnine.config')
 tabnine:setup({max_lines = 1000, max_num_results = 20, sort = true})
-
--- Database completion
-vim.api.nvim_exec([[
-autocmd FileType sql,mysql,plsql lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }} })
-]], false)
