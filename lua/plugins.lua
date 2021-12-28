@@ -14,9 +14,8 @@ return require('packer').startup(
     use 'folke/lsp-colors.nvim'
     use 'ap/vim-css-color'
     use 'maxmellon/vim-jsx-pretty'
-    use 'pangloss/vim-javascript'
-    use 'norcalli/nvim-colorizer.lua'
     use 'folke/tokyonight.nvim'
+    use 'nvim-treesitter/nvim-treesitter'
 
     -- cmp
     use 'hrsh7th/cmp-nvim-lsp'
