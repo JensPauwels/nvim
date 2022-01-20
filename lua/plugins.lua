@@ -1,10 +1,6 @@
 vim.cmd('packadd packer.nvim')
--- vim.cmd('packadd nvim-treesitter')
--- vim.cmd('packadd nvim-lspconfig')
-
 return require('packer').startup(
   function()
-
     -- themes
     use 'challenger-deep-theme/vim'
     use 'drewtempelmeyer/palenight.vim'
@@ -73,8 +69,6 @@ return require('packer').startup(
     use {
       'glepnir/galaxyline.nvim',
       branch = 'main',
-      -- your statusline
-      -- some optional icons
       requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
 
@@ -82,7 +76,5 @@ return require('packer').startup(
       'nvim-telescope/telescope.nvim',
       requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
     }
-
-
   end
 )
