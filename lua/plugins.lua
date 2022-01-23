@@ -5,13 +5,14 @@ return require('packer').startup(
     use 'challenger-deep-theme/vim'
     use 'drewtempelmeyer/palenight.vim'
     use 'EdenEast/nightfox.nvim'
+    use 'folke/tokyonight.nvim'
+    use 'mhartington/oceanic-next'
 
     -- highlighting
     use 'folke/lsp-colors.nvim'
     use 'ap/vim-css-color'
     use 'maxmellon/vim-jsx-pretty'
-    use 'folke/tokyonight.nvim'
-    use 'nvim-treesitter/nvim-treesitter'
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
     -- cmp
     use 'hrsh7th/cmp-nvim-lsp'
@@ -20,10 +21,13 @@ return require('packer').startup(
     use 'hrsh7th/cmp-cmdline'
     use 'hrsh7th/nvim-cmp'
     use 'quangnguyen30192/cmp-nvim-ultisnips'
-    use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+
+    -- Golang
+    use 'fatih/vim-go'
 
     -- lsp
-    use 'williamboman/nvim-lsp-installer'
+    use 'onsails/lspkind-nvim'
+    use 'neovim/nvim-lspconfig'
 
     -- completion
     use 'tpope/vim-abolish'
@@ -31,13 +35,6 @@ return require('packer').startup(
     use 'mattn/emmet-vim'
     use 'ervandew/supertab'
     use 'tpope/vim-surround'
-
-    -- tmux
-    use 'edkolev/tmuxline.vim'
-
-    -- lsp
-    use 'onsails/lspkind-nvim'
-    use 'neovim/nvim-lspconfig'
 
     -- commentary
     use 'tpope/vim-commentary'
@@ -52,6 +49,7 @@ return require('packer').startup(
     -- package manager
     use 'wbthomason/packer.nvim'
 
+    -- tabline
     use 'mkitt/tabline.vim'
     
     use {
@@ -59,17 +57,8 @@ return require('packer').startup(
       requires = "kyazdani42/nvim-web-devicons",
       config = function()
         require("trouble").setup {
-          -- your configuration comes here
-          -- or leave it empty to use the default settings
-          -- refer to the configuration section below
         }
       end
-    }
-
-    use {
-      'glepnir/galaxyline.nvim',
-      branch = 'main',
-      requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
 
     use {

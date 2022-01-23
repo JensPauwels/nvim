@@ -10,15 +10,20 @@ vim.api.nvim_set_keymap('n', '<C-J>', '<C-W><C-J>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-K>', '<C-W><C-K>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-L>', '<C-W><C-L>', { noremap = true })
 
--- Telescope keybinds
-vim.api.nvim_set_keymap('n', '<Leader>ff', '<cmd>Telescope find_files<cr>', { noremap = true })
+-- Opens a telescope menu that allows you to search in the whole project
 vim.api.nvim_set_keymap('n', '<Leader>fg', '<cmd>Telescope live_grep<cr>', { noremap = true })
+
+-- Opens a telescope menu with all the active buffers
 vim.api.nvim_set_keymap('n', '<Leader>fb', '<cmd>Telescope buffers<cr>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-p>', '<cmd>lua require("telescope.builtin").find_files()<cr>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>fh', '<cmd>Telescope help_tags<cr>', { noremap = true, expr = true })
+
+-- Opens the telescope file finder
+vim.api.nvim_set_keymap('n', '<C-p>', '<cmd>Telescope find_files<cr>', { noremap = true })
 
 -- Keybinds to create a new tab
 vim.api.nvim_set_keymap('n', 'tnew', ':tabnew<cr>', { noremap = true })
+
+-- Removes the previous highlight
+vim.api.nvim_set_keymap('n', '<Esc>', ':noh<cr>', { noremap = true })
 
 -- Keybinds to move line up or down
 vim.api.nvim_set_keymap('n', '<Leader>k', 'ddkP', { noremap = true })
