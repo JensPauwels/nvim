@@ -29,3 +29,7 @@ vim.api.nvim_set_keymap('n', '<Esc>', ':noh<cr>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>k', 'ddkP', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>j', 'ddp', { noremap = true })
 
+-- Keybinds to trigger my custom plugins
+vim.api.nvim_set_keymap('n', '<Leader>file', ":lua require('createFile').start();<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>model', ":lua require('modelCreator').start();<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>list', ":lua require('overviewCustomPlugins').start();<CR>", { noremap = true })

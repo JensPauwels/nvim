@@ -36,6 +36,10 @@ return require('packer').startup(
     use 'ervandew/supertab'
     use 'tpope/vim-surround'
 
+    -- FZF is required for my custom plugins
+    use 'vijaymarupudi/nvim-fzf'
+
+
     -- commentary
     use 'tpope/vim-commentary'
     use 'kkoomen/vim-doge'
