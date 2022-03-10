@@ -36,14 +36,7 @@ cmp.setup {
   },
   snippet = {expand = function(args) vim.fn["UltiSnips#Anon"](args.body) end},
   sources = {
-    {
-      name = 'buffer',
-      option = {
-        get_bufnrs = function() 
-          return vim.api.nvim_list_bufs()
-        end
-      }
-    },
+    {name = 'buffer'},
     {name = "ultisnips"},
     {name = 'nvim_lsp'},
     {name = "nvim_lua"},

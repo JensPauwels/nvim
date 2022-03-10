@@ -7,6 +7,8 @@ return require('packer').startup(
     use 'EdenEast/nightfox.nvim'
     use 'folke/tokyonight.nvim'
     use 'mhartington/oceanic-next'
+    use 'trevordmiller/nova-vim'
+    use 'bluz71/vim-nightfly-guicolors'
 
     -- highlighting
     use 'folke/lsp-colors.nvim'
@@ -24,6 +26,7 @@ return require('packer').startup(
 
     -- Golang
     use 'fatih/vim-go'
+
 
     -- lsp
     use 'onsails/lspkind-nvim'

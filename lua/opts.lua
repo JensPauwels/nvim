@@ -52,3 +52,6 @@ vim.g.user_emmet_settings = [[{
 		'extends' : 'jsx',
 	},
 }]]
+
+vim.api.nvim_command('set colorcolumn=100')
+
