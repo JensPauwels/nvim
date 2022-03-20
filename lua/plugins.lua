@@ -1,54 +1,51 @@
 vim.cmd('packadd packer.nvim')
 return require('packer').startup(
   function()
-    -- themes
+    -- Themes
     use 'challenger-deep-theme/vim'
-    use 'drewtempelmeyer/palenight.vim'
-    use 'EdenEast/nightfox.nvim'
-    use 'folke/tokyonight.nvim'
-    use 'mhartington/oceanic-next'
-    use 'trevordmiller/nova-vim'
-    use 'bluz71/vim-nightfly-guicolors'
+    use 'rebelot/kanagawa.nvim'
 
-    -- highlighting
+    -- Highlighting
     use 'folke/lsp-colors.nvim'
     use 'ap/vim-css-color'
     use 'maxmellon/vim-jsx-pretty'
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
-    -- cmp
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-cmdline'
-    use 'hrsh7th/nvim-cmp'
-    use 'quangnguyen30192/cmp-nvim-ultisnips'
+    -- Completion
+    use {
+      'ms-jpq/coq_nvim', 
+      branch = 'coq'
+    } 
+
 
     -- Golang
     use 'fatih/vim-go'
 
-
-    -- lsp
+    -- Lsp
     use 'onsails/lspkind-nvim'
     use 'neovim/nvim-lspconfig'
 
-    -- completion
+    -- Completion
     use 'tpope/vim-abolish'
-    use 'jiangmiao/auto-pairs'
     use 'mattn/emmet-vim'
     use 'ervandew/supertab'
     use 'tpope/vim-surround'
+    use 'windwp/nvim-autopairs'
 
     -- FZF is required for my custom plugins
     use 'vijaymarupudi/nvim-fzf'
 
-
-    -- commentary
+    -- Commentary
     use 'tpope/vim-commentary'
-    use 'kkoomen/vim-doge'
 
-    -- navigation
-    use 'scrooloose/nerdtree'
+    -- Navigation
+    use {
+      'kyazdani42/nvim-tree.lua',
+      requires = {
+        'kyazdani42/nvim-web-devicons', -- optional, for file icon
+      },
+      config = function() require'nvim-tree'.setup {} end
+    }
 
     -- snippets
     use 'SirVer/ultisnips' 

@@ -1,9 +1,11 @@
-require('plugins')
+require('coqsettings')
 require('opts')
 require('style')
 require('statusline')
 require('lsp')
-require('cmp_settings')
 require('treesitter')
+require('autopairs')
 require('maps')
+require('supertab')
 
+require('plugins')

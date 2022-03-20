@@ -1,5 +1,5 @@
 -- Keybind to open the file navigator
-vim.api.nvim_set_keymap('n', '<Leader>n', ':NERDTreeToggle<CR>', {})
+vim.api.nvim_set_keymap('n', '<Leader>n', ':NvimTreeToggle<CR>', {})
 
 -- Keybind to replace
 vim.api.nvim_set_keymap('v', 'r', '"_dP', {})
