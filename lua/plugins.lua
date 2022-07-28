@@ -1,15 +1,27 @@
 vim.cmd('packadd packer.nvim')
 return require('packer').startup(
   function()
+    -- Spell checking
+    use 'kamykn/spelunker.vim'
+
     -- Themes
     use 'challenger-deep-theme/vim'
     use 'rebelot/kanagawa.nvim'
+    use 'yunlingz/equinusocio-material.vim'
+    use 'Shatur/neovim-ayu'
+    use 'catppuccin/nvim'
 
     -- Highlighting
-    use 'folke/lsp-colors.nvim'
+    -- use 'folke/lsp-colors.nvim'
     use 'ap/vim-css-color'
     use 'maxmellon/vim-jsx-pretty'
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
+    -- Statusline
+    use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 
     -- Completion
     use {
@@ -17,9 +29,13 @@ return require('packer').startup(
       branch = 'coq'
     } 
 
+    -- Svelte
+    use 'evanleck/vim-svelte'
+    use 'HerringtonDarkholme/yats.vim'
 
     -- Golang
     use 'fatih/vim-go'
+    use 'sebdah/vim-delve'
 
     -- Lsp
     use 'onsails/lspkind-nvim'
@@ -34,6 +50,9 @@ return require('packer').startup(
 
     -- FZF is required for my custom plugins
     use 'vijaymarupudi/nvim-fzf'
+
+    -- easy motion
+    use 'easymotion/vim-easymotion'
 
     -- Commentary
     use 'tpope/vim-commentary'
@@ -56,14 +75,14 @@ return require('packer').startup(
     -- tabline
     use 'mkitt/tabline.vim'
     
-    use {
-      "folke/trouble.nvim",
-      requires = "kyazdani42/nvim-web-devicons",
-      config = function()
-        require("trouble").setup {
-        }
-      end
-    }
+    -- use {
+    --   "folke/trouble.nvim",
+    --   requires = "kyazdani42/nvim-web-devicons",
+    --   config = function()
+    --     require("trouble").setup {
+    --     }
+    --   end
+    -- }
 
     use {
       'nvim-telescope/telescope.nvim',

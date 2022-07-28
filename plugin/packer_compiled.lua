@@ -79,20 +79,35 @@ _G.packer_plugins = {
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
   },
+  ["equinusocio-material.vim"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/equinusocio-material.vim",
+    url = "https://github.com/yunlingz/equinusocio-material.vim"
+  },
   ["kanagawa.nvim"] = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
   },
-  ["lsp-colors.nvim"] = {
-    loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
-    url = "https://github.com/folke/lsp-colors.nvim"
-  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["neovim-ayu"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/neovim-ayu",
+    url = "https://github.com/Shatur/neovim-ayu"
+  },
+  nvim = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/nvim",
+    url = "https://github.com/catppuccin/nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -140,6 +155,16 @@ _G.packer_plugins = {
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["spelunker.vim"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/spelunker.vim",
+    url = "https://github.com/kamykn/spelunker.vim"
+  },
+  supertab = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/supertab",
+    url = "https://github.com/ervandew/supertab"
+  },
   ["tabline.vim"] = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/tabline.vim",
@@ -149,12 +174,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["trouble.nvim"] = {
-    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0" },
-    loaded = true,
-    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/trouble.nvim",
-    url = "https://github.com/folke/trouble.nvim"
   },
   ultisnips = {
     loaded = true,
@@ -181,6 +200,16 @@ _G.packer_plugins = {
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-css-color",
     url = "https://github.com/ap/vim-css-color"
   },
+  ["vim-delve"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-delve",
+    url = "https://github.com/sebdah/vim-delve"
+  },
+  ["vim-easymotion"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-easymotion",
+    url = "https://github.com/easymotion/vim-easymotion"
+  },
   ["vim-go"] = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-go",
@@ -195,14 +224,20 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
+  },
+  ["vim-svelte"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/vim-svelte",
+    url = "https://github.com/evanleck/vim-svelte"
+  },
+  ["yats.vim"] = {
+    loaded = true,
+    path = "/Users/jenspauwels/.local/share/nvim/site/pack/packer/start/yats.vim",
+    url = "https://github.com/HerringtonDarkholme/yats.vim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: trouble.nvim
-time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
-time([[Config for trouble.nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0", "config", "nvim-tree.lua")

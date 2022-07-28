@@ -1,1 +1,5 @@
-vim.o.statusline = ' %f%m%=%Y '
+require('lualine').setup({
+  options = {
+    theme = 'ayu',
+  },
+})
