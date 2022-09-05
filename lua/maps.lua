@@ -43,3 +43,6 @@ vim.api.nvim_set_keymap('n', '<Leader>list', ":lua require('overviewCustomPlugin
 
 vim.o.updatetime = 150
 vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, { focus = false, border = "single" })]])
+
+-- TMP
+vim.api.nvim_set_keymap('n', '<F12>', ':FloatermToggle<CR>', { noremap = true, silent = true })

@@ -4,6 +4,11 @@ return require('packer').startup(
     -- Spell checking
     use 'kamykn/spelunker.vim'
 
+
+    -- Test
+    use 'voldikss/vim-floaterm'
+
+
     -- Themes
     use 'challenger-deep-theme/vim'
     use 'rebelot/kanagawa.nvim'
@@ -74,15 +79,6 @@ return require('packer').startup(
 
     -- tabline
     use 'mkitt/tabline.vim'
-    
-    -- use {
-    --   "folke/trouble.nvim",
-    --   requires = "kyazdani42/nvim-web-devicons",
-    --   config = function()
-    --     require("trouble").setup {
-    --     }
-    --   end
-    -- }
 
     use {
       'nvim-telescope/telescope.nvim',
