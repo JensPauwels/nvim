@@ -1,4 +1,6 @@
 local nvim_lsp = require('lspconfig')
+
+vim.cmd[[let g:coq_settings = { 'auto_start': 'shut-up' }]]
 local coq = require "coq"
 
 -- Use an on_attach function to only map the following keys

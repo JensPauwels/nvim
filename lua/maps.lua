@@ -52,8 +52,8 @@ vim.api.nvim_set_keymap('n', '<Leader>model', ":lua require('modelCreator').star
 vim.api.nvim_set_keymap('n', '<Leader>gtest', ":lua require('testCreator').start();<CR>", { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>list', ":lua require('overviewCustomPlugins').start();<CR>", { noremap = true })
 
-vim.o.updatetime = 150
-vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, { focus = false, border = "single" })]])
+-- vim.o.updatetime = 150
+-- vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, { focus = false, border = "single" })]])
 
 -- TMP
 vim.api.nvim_set_keymap('n', '<F12>', ':FloatermToggle<CR>', { noremap = true, silent = true })
