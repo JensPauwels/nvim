@@ -4,10 +4,8 @@ return require('packer').startup(
     -- Spell checking
     use 'kamykn/spelunker.vim'
 
-
     -- Test
     use 'voldikss/vim-floaterm'
-
 
     -- Themes
     use 'challenger-deep-theme/vim'
@@ -15,6 +13,9 @@ return require('packer').startup(
     use 'yunlingz/equinusocio-material.vim'
     use 'Shatur/neovim-ayu'
     use 'catppuccin/nvim'
+    use 'arzg/vim-colors-xcode'
+    use 'folke/tokyonight.nvim'
+
 
     -- Highlighting
     -- use 'folke/lsp-colors.nvim'
@@ -25,7 +26,6 @@ return require('packer').startup(
     -- Statusline
     use {
       'nvim-lualine/lualine.nvim',
-      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 
     -- Completion
@@ -65,11 +65,13 @@ return require('packer').startup(
     -- Navigation
     use {
       'kyazdani42/nvim-tree.lua',
-      requires = {
-        'kyazdani42/nvim-web-devicons', -- optional, for file icon
-      },
-      config = function() require'nvim-tree'.setup {} end
+      config = function() require'nvim-tree'.setup {
+      } end
     }
+
+    -- git
+    use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
 
     -- snippets
     use 'SirVer/ultisnips' 
@@ -77,12 +79,19 @@ return require('packer').startup(
     -- package manager
     use 'wbthomason/packer.nvim'
 
+    -- Legendary
+    use({ 'mrjones2014/legendary.nvim' })
+
+
     -- tabline
     use 'mkitt/tabline.vim'
 
     use {
       'nvim-telescope/telescope.nvim',
-      requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+      requires = {
+        {'nvim-lua/popup.nvim'},
+        {'nvim-lua/plenary.nvim'}
+      }
     }
   end
 )

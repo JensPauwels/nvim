@@ -1,5 +1,6 @@
 require('coqsettings')
 require('opts')
+require('tokyonightsettings')
 require('style')
 require('lsp')
 require('treesitter')
@@ -7,5 +8,5 @@ require('autopairs')
 require('maps')
 require('supertab')
 require('statusline')
-
 require('plugins')
+require('legendarysettings')

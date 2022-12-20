@@ -1,5 +1,6 @@
 -- Keybind to open the file navigator
 vim.api.nvim_set_keymap('n', '<Leader>n', ':NvimTreeToggle<CR>', {})
+-- vim.api.nvim_set_keymap( "n", "<Leader>n", ":Telescope file_browser<cr>", { noremap = true })
 
 -- Keybind to replace
 vim.api.nvim_set_keymap('v', 'r', '"_dP', {})
@@ -9,6 +10,15 @@ vim.api.nvim_set_keymap('n', '<C-H>', '<C-W><C-H>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-J>', '<C-W><C-J>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-K>', '<C-W><C-K>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-L>', '<C-W><C-L>', { noremap = true })
+
+-- go tests
+vim.api.nvim_set_keymap('n', '<Leader>gc', ':GoCoverage<cr>', { noremap = true })
+
+vim.api.nvim_set_keymap('n', '<Leader>jf', ':%!jq .<cr>', { noremap = true })
+
+-- go escape terminal
+-- vim.api.nvim_set_keymap('n', '<Leader><Esc>', '<C-\><C-n>', { noremap = true })
+vim.cmd([[tnoremap <Esc> <C-\><C-n>]])
 
 -- easy motion
 vim.api.nvim_set_keymap('n', '<Leader>f', '<Plug>(easymotion-bd-f)', { noremap = true })
@@ -33,7 +43,8 @@ vim.api.nvim_set_keymap('n', '<Leader>k', 'ddkP', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>j', 'ddp', { noremap = true })
 
 -- Lsp maps
-vim.api.nvim_set_keymap('n', '<Leader>e', '<cmd>lua vim.diagnostic.open_float()<cr>', { noremap = true})
+-- vim.api.nvim_set_keymap('n', '<Leader>e', '<cmd>lua vim.diagnostic.open_float()<cr>', { noremap = true})
+vim.api.nvim_set_keymap('n', '<Leader>e', ':Telescope diagnostics<cr>', { noremap = true})
 
 -- Keybinds to trigger my custom plugins
 vim.api.nvim_set_keymap('n', '<Leader>file', ":lua require('createFile').start();<CR>", { noremap = true })
