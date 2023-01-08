@@ -11,9 +11,9 @@ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
  end
  vim.opt.runtimepath:prepend(lazypath)
 
-require('lazysettings')
 require('coqsettings')
 require('opts')
+require('lazysettings')
 require('tokyonightsettings')
 require('style')
 require('lsp')
@@ -21,5 +21,3 @@ require('treesitter')
 require('autopairs')
 require('maps')
 require('supertab')
-require('statusline')
-require('plugins')

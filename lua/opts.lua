@@ -42,7 +42,6 @@ vim.g.termbufm_direction_cmd = 'new'
 vim.g.mapleader = ' '
 vim.b.mapleader = ' '
 
-vim.g.UltiSnipsSnippetsDir = '~/.config/nvim/ultisnips'
 vim.g.user_emmet_leader_key = ','
 vim.g.user_emmet_settings = [[{
 	'javascript.js' : {
@@ -52,6 +51,8 @@ vim.g.user_emmet_settings = [[{
 		'extends' : 'jsx',
 	},
 }]]
+
+vim.g.UltiSnipsSnippetsDir = '~/.config/nvim/ultisnips'
 
 vim.api.nvim_command('set colorcolumn=100')
 

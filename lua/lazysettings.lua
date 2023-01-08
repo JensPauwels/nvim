@@ -9,6 +9,9 @@ require("lazy").setup({
     'catppuccin/nvim',
     'folke/tokyonight.nvim',
 
+    -- Import cost
+    'barrett-ruth/import-cost.nvim',
+
 
     -- Highlighting
     'folke/lsp-colors.nvim',
@@ -58,6 +61,7 @@ require("lazy").setup({
     { 'kyazdani42/nvim-tree.lua', config = function() require'nvim-tree'.setup { } end },
 
     -- git
+    'folke/trouble.nvim',
 
     -- snippets
     'SirVer/ultisnips' ,

@@ -1,6 +1,4 @@
 local nvim_lsp = require('lspconfig')
-
-vim.cmd[[let g:coq_settings = { 'auto_start': 'shut-up' }]]
 local coq = require "coq"
 
 -- Use an on_attach function to only map the following keys
@@ -36,7 +34,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'tsserver', 'cssls', 'gopls', 'svelte' }
+local servers = { 'tsserver', 'cssls', 'gopls', 'svelte', 'php', 'intelephense' }
 
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup(
@@ -49,11 +47,3 @@ for _, lsp in ipairs(servers) do
     })
   ) 
 end
-
--- vim.diagnostic.config{
---   update_in_insert = true,
--- }
---
-vim.diagnostic.config({
-  virtual_text = false,
-})
