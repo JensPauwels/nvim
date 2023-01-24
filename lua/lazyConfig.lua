@@ -13,6 +13,8 @@ require("lazy").setup({
     'barrett-ruth/import-cost.nvim',
 
 
+    'phaazon/hop.nvim',
+
     -- Highlighting
     'folke/lsp-colors.nvim',
     'ap/vim-css-color',
